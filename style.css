@@ -1,0 +1,258 @@
+/* Logo Styling */
+#logo {
+    height: 50px;
+    transition: transform 0.3s;
+  }
+  #logo:hover {
+    transform: rotate(360deg);
+  }
+
+  .fa-music{
+    font-size:50px;
+    color:rgb(30, 167, 167);
+    
+  }
+  .fa-magnifying-glass{
+    height: auto;
+    width:auto;
+  }
+  .fa-cart-shopping{
+    height: auto;
+    width:auto;
+  }
+  
+  
+  /* Landing Page Image */
+  #landingImage {
+    box-shadow: 0px 4px 10px rgba(21, 139, 172, 0.50);
+    border-radius: 10px; /* Optional: Makes the image corners rounded */
+  }
+  
+  #landingImage {
+    transition: transform 1.5s;
+    border-radius: 8px;
+  }
+
+  #landingImage:hover {
+    transform: scale(0.8);
+  }
+  
+  /* Feature Cards */
+  .feature-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(90, 166, 187, 0.7);
+    transition: transform 0.3s;
+  }
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+  .feature-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .feature-card::after {
+    content: attr(data-hover-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .feature-card:hover::after {
+    opacity: 1;
+  }
+
+  /* Product Cards */
+  .product-card:hover {
+    transform: translateY(-10px);
+  }
+  
+.product-card {
+    border: 1px solid #b4ebf5;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .product-card button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+  #noResults {
+    display: none;
+    text-align: center;
+    font-size: 1.2rem;
+    color: red;
+    margin-top: 20px;
+  }
+  
+ 
+  
+  /* Cart Popup Styling */
+  #cartPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .cart-popup-content {
+    background: white;
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  #cartPopup ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #cartPopup li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #cartPopup li button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  #cartPopup #closePopup {
+    margin-top: 20px;
+  }
+  #testimonials {
+    background-color: #f9f9f9; /* Light background for distinction */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  }
+  
+  .rating-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .rating-buttons .btn {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background-color: transparent;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .rating-buttons .btn:hover,
+  .rating-buttons .btn.selected {
+    background-color: #fdd835; /* Yellow for stars */
+    color: #fff;
+    border-color: #fdd835;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .rating-buttons {
+      flex-direction: column;
+    }
+    .rating-buttons .btn {
+      font-size: 1.2rem;
+      width: 100px;
+    }
+  }
+  
+  /* Contact Us Section */
+#contact {
+  background-color: #f9f9f9; /* Light background */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#contact h2 {
+  color: #333;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Help Popup */
+.help-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 999;
+  width: 90%;
+  max-width: 400px;
+}
+
+.help-popup-content h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.help-popup-content textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.help-popup-content button {
+  margin-top: 10px;
+}
+
+/* Backdrop for Popup */
+.help-popup + #helpBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 998;
+}
+
+  
+  
+
+  
